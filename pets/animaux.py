@@ -12,7 +12,8 @@ class Pet:
 def afficher_menu():
 	print("1. Ajouter un animal")
 	print("2. Afficher les animaux")
-	print("3. Quitter")
+	print("3. Donner à manger")
+	print("4. Quitter")
 
 animaux = []
 
@@ -32,6 +33,12 @@ while True:
 		for animal in animaux:
 			print(f"{animal.name} est un {animal.race} adopté par {animal.parent}")
 	elif choix == "3":
+		print("Donner à manger à tous les animaux")
+		for animal in animaux:
+			animal.manger()
+	elif choix == "4":
 		print("Au revoir")
+		break
 	else:
 		print("Choix invalide, veuillez réessayer")
+
