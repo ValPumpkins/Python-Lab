@@ -5,11 +5,11 @@ class Pet:
 		self.parent = parent
 		self.hunger = 0
 
-	def manger(self):
+	def stomachFull(self):
 		self.hunger -= 1
 		print(f"{self.name} a mangé et n'a plus faim.")
 
-def afficher_menu():
+def displayNav():
 	print("1. Ajouter un animal")
 	print("2. Afficher les animaux")
 	print("3. Donner à manger")
@@ -18,7 +18,7 @@ def afficher_menu():
 animaux = []
 
 while True:
-	afficher_menu()
+	displayNav()
 	choix = input("Choississez une option: ")
 
 	if choix == "1":
